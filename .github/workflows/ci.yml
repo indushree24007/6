@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install pytest
+      run: pip install pytest
+
+    - name: Run Test
+      run: pytest
